@@ -43,6 +43,13 @@ except ImportError:
 
 SERVICE_KEY: str = os.environ.get("DATA_GO_KR_KEY", "")
 
+# 키워드 필터링 목록
+FILTER_KEYWORDS = [
+    "AI", "교육", "디지털", "데이터", "ICT", "취업", "연수", "SW", "인공지능", "양성", 
+    "과정", "역량강화", "AIDT", "지원사업", "혁신바우처", "아카데미", "소프트웨어", 
+    "창업", "캠프", "스타트업", "메타버스", "챌린지", "코딩"
+]
+
 # API 설정
 BASE_URL = "https://apis.data.go.kr/1230000/ao/OrderPlanSttusService"
 OPERATION = "getOrderPlanSttusListServc"
@@ -381,11 +388,30 @@ def main() -> int:
     # 파일명 생성
     os.makedirs("outputs", exist_ok=True)
     if len(months) == 1:
-        fname = os.path.join("outputs", f"{year}년_{months[0]}월_용역_발주계획.xlsx")
+        fname_base = f"{year}년_{months[0]}월_용역_발주계획"
     else:
-        fname = os.path.join("outputs", f"{year}년_{months[0]}-{months[-1]}월_용역_발주계획.xlsx")
+        fname_base = f"{year}년_{months[0]}-{months[-1]}월_용역_발주계획"
 
+    fname = os.path.join("outputs", f"{fname_base}.xlsx")
+    fname_filtered = os.path.join("outputs", f"{fname_base}_키워드필터.xlsx")
+
+    # 원본 파일 저장
+    print("\n[원본 데이터 저장]")
     write_xlsx(month_data, year, fname)
+
+    # 필터링 데이터 생성 및 저장
+    print("\n[필터링 데이터 저장]")
+    month_data_filtered = {}
+    for m in months:
+        filtered_items = []
+        for it in month_data.get(m, []):
+            biz_nm = (it.get("bizNm") or "").upper()
+            if any(k.upper() in biz_nm for k in FILTER_KEYWORDS):
+                filtered_items.append(it)
+        month_data_filtered[m] = filtered_items
+
+    write_xlsx(month_data_filtered, year, fname_filtered)
+
     return 0
 
 
