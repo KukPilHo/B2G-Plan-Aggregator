@@ -1,0 +1,5112 @@
+
+조달청 공공데이터 개방
+OpenAPI 참고자료
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+목 차
+
+목 차
+1. 서비스 명세	3
+1.1 나라장터 발주계획현황서비스	3
+가. 서비스 개요	3
+나. 오퍼레이션 목록	4
+
+
+
+
+
+
+
+
+
+
+
+개정 이력
+버 전
+변경일
+변경 구분
+변경사유
+1.0
+2025
+최초 개정
+최초 개정
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. 서비스 명세
+1.1 나라장터 발주계획현황서비스
+서비스 개요
+서비스 정보
+서비스 ID
+OrderPlanSttusService
+
+서비스명(국문)
+나라장터 발주계획현황서비스
+
+서비스명(영문)
+OrderPlanSttusService
+
+서비스 설명
+발주기관들이 나라장터에 등록한 발주계획정보를 제공하는 서비스로 각 발주기관들이 당해 회계연도에 조달할 공사, 물품, 용역, 외자에 대한 분기별 발주계획(조달대상, 예산액, 발주예정시기, 발주방법, 발주기관 주소, 연락처 등) 공고 내역를 제공하는 나라장터 발주계획현황서비스
+서비스 보안
+서비스 인증/권한
+[O] 서비스 Key [ ] 인증서 (GPKI)
+[] Basic (ID/PW) [ ] 없음
+[ ]WS-Security
+
+메시지 레벨 암호화
+[  ] 전자서명	[ ] 암호화	[O] 없음
+
+
+전송 레벨 암호화
+[  ] SSL			[ O] 없음
+적용 기술 수준
+인터페이스 표준
+[  ] SOAP 1.2
+(RPC-Encoded, Document Literal, Document Literal Wrapped)
+[ O ] REST (GET)
+[ ] RSS 1.0 [ ] RSS 2.0 [ ] Atom 1.0 [ ] 기타
+
+교환 데이터 표준
+[ O ] XML	[ O ] JSON	[ ] MIME	[ ] MTOM
+서비스 URL
+개발환경
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService
+
+운영환경
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService
+서비스 WADL
+개발환경
+N/A
+
+운영환경
+N/A
+서비스 배포 정보
+서비스 버전
+1.0
+
+서비스 시작일
+2025-01-06
+배포 일자
+2025-01-06
+
+서비스 이력
+N/A
+메시지 교환 유형
+[O] Request-Response	[ ] Publish-Subscribe
+[ ] Fire-and-Forgot		[ ] Notification
+메시지 로깅 수준
+성공
+[O] Header [ ] Body
+실패
+[O] Header [O} Body
+사용 제약 사항 (비고)
+N/A
+서비스 제공자
+차도빈 / 조달청 전자조달기획과 / 042-724-7124 / dobin@korea.kr
+데이터 갱신주기
+수시
+오퍼레이션 목록
+일련번호
+서비스명(국문)
+오퍼레이션명(영문)
+오퍼레이션명(국문)
+메시지명(영문)
+1
+나라장터 발주계획현황 서비스
+getOrderPlanSttusListThng
+발주계획현황에 대한 물품조회
+N/A
+2
+
+getOrderPlanSttusListCnstwk
+발주계획현황에 대한 공사조회
+N/A
+3
+
+getOrderPlanSttusListServc
+발주계획현황에 대한 용역조회
+N/A
+4
+
+getOrderPlanSttusListFrgcpt
+발주계획현황에 대한 외자조회
+N/A
+5
+
+getOrderPlanSttusListThngPPSSrch
+나라장터 검색조건에 의한 발주계획현황에 대한 물품조회
+N/A
+6
+
+getOrderPlanSttusListCnstwkPPSSrch
+나라장터 검색조건에 의한 발주계획현황에 대한 공사조회
+N/A
+7
+
+getOrderPlanSttusListServcPPSSrch
+나라장터 검색조건에 의한 발주계획현황에 대한 용역조회
+N/A
+8
+
+getOrderPlanSttusListFrgcptPPSSrch
+나라장터 검색조건에 의한 발주계획현황에 대한 외자조회
+N/A
+
+[발주계획현황에 대한 물품조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+1
+오퍼레이션명(국문)
+발주계획현황에 대한 물품조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListThng
+
+오퍼레이션 설명
+검색조건을 조회구분, 발주년월범위, 게시일자범위, 발주기관코드, 발주기관명, 발주계획통합번호로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 물품에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+inqryDiv
+조회구분
+1
+1
+1
+검색하고자하는 조회구분 1. 발주년월, 게시일시 2. 발주계획통합번호
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM'  * 입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+orderEndYm
+발주종료년월
+6
+0
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM'  *입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+inqryBgnDt
+조회시작일시
+12
+0
+201606010000
+검색하고자하는 게시일시 기준 조회시작
+'YYYYMMDDHHmm' *입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm' *입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+1-1-2016-7000126-000009
+검색하고자하는 업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨. 조회구분이 2인 경우 필수
+orderInsttCd
+발주기관코드
+7
+0
+7000126
+검색하고자하는 발주기관코드. 조회구분이 1인 경우 선택
+orderInsttNm
+발주기관명
+200
+0
+경북대학교
+검색하고자하는 발주기관명. 조회구분이 1인 경우 선택
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+1
+업무구분코드가1이면 물품, 2면 외자, 3이면 공사, 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+물품
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+7000126
+발주기관코드는행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+교육인적자원부
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+01
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+국가기관
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+경북대학교
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+9
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+경북대학교 생물안전작업대(중소기업자간 경쟁물품) 구매 [재공고]
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+일반총액
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+0
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+0
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+327250000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+재무과
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+우용준
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+053-950-5042
+발주계획의 담당자 전화번호
+agrmntYn
+협정여부
+1
+0
+N
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+실험실안전장비
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+30
+발주계획의 수량내용
+unit
+단위
+30
+0
+set
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+11
+0
+41103502
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4110350201
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+실험실용배기기
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+Y
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+279223.5
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201606271388
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Ultra Performance Liquid Chromatography System
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Photodiode Array Detector
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Chromatography manager software
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+System Suitability Option Software
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Accessories
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Type : Binary Precise, High pressure blending
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+Number of Sample Plates : 96 vial or morer
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+Column Temperature Control : 5.0°C above ambient to 90.0°C or wider
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+Wavelength Range : 190~800 nm or wider
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Full 64 bit OS System &#8211; Win 7 pro
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+9027200000
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+201608
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+1-1-2016-7000126-000009
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListThng?inqryDiv=1&orderBgnYm=201606&orderEndYm=201606&inqryBgnDt=201606010000&inqryEndDt=201606282359&orderInsttCd=7000126&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>정상</resultMsg>
+</header>
+<body>
+<items>
+ <item>
+  <bsnsDivCd>1</bsnsDivCd> 
+  <bsnsDivNm>물품</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>7000126</orderInsttCd> 
+  <totlmngInsttNm>교육인적자원부</totlmngInsttNm> 
+  <jrsdctnDivCd>01</jrsdctnDivCd> 
+  <jrsdctnDivNm>국가기관</jrsdctnDivNm> 
+  <orderInsttNm>경북대학교</orderInsttNm> 
+  <orderPlanSno>9</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>경북대학교 생물안전작업대(중소기업자간 경쟁물품) 구매 [재공고]</bizNm> 
+  <cnstwkRgnNm /> 
+  <cnsttyDivNm /> 
+  <cntrctMthdNm>일반총액</cntrctMthdNm> 
+  <orderContrctAmt /> 
+  <orderGovsplyMtrcst /> 
+  <orderEtcAmt /> 
+  <sumOrderAmt>327250000</sumOrderAmt> 
+  <deptNm>재무과</deptNm> 
+  <ofclNm>우용준</ofclNm> 
+  <telNo>053-950-5042</telNo> 
+  <agrmntYn>N</agrmntYn> 
+  <usgCntnts>실험실안전장비</usgCntnts> 
+  <qtyCntnts>30</qtyCntnts> 
+  <unit>set</unit> 
+  <prdctClsfcNo>41103502</prdctClsfcNo> 
+  <dtilPrdctClsfcNo>4110350201</dtilPrdctClsfcNo> 
+  <prdctClsfcNoNm>실험실용배기기</prdctClsfcNoNm> 
+  <ntceNticeYn>Y</ntceNticeYn> 
+  <cnstwkMngNo>20160632530</cnstwkMngNo> 
+  <orderOrd /> 
+  <sumOrderDolAmt>279223.5</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1 /> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1 /> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd /> 
+  <cnstwkPrdCntnts /> 
+  <nticeDt>2016-06-28 13:21:05</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm>실험실용배기기</dtilPrdctClsfcNoNm> 
+  <specCntnts>세부 규격서 참조</specCntnts> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>1-1-2016-7000126-000009</orderPlanUntyNo> 
+<bidNtceNoList>20160632530</bidNtceNoList>
+<systmChgDt/> 
+  </item>
+ <item>
+  <bsnsDivCd>1</bsnsDivCd> 
+  <bsnsDivNm>물품</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>7000126</orderInsttCd> 
+  <totlmngInsttNm>교육인적자원부</totlmngInsttNm> 
+  <jrsdctnDivCd>01</jrsdctnDivCd> 
+  <jrsdctnDivNm>국가기관</jrsdctnDivNm> 
+  <orderInsttNm>경북대학교</orderInsttNm> 
+  <orderPlanSno>8</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>경북대학교 교내 시설물 안내 사인시스템 제작 설치(재공고)</bizNm> 
+  <cnstwkRgnNm /> 
+  <cnsttyDivNm /> 
+  <cntrctMthdNm>일반총액</cntrctMthdNm> 
+  <orderContrctAmt /> 
+  <orderGovsplyMtrcst /> 
+  <orderEtcAmt /> 
+  <sumOrderAmt>180930000</sumOrderAmt> 
+  <deptNm>재무과</deptNm> 
+  <ofclNm>전진한</ofclNm> 
+  <telNo>053-950-5043</telNo> 
+  <agrmntYn>N</agrmntYn> 
+  <usgCntnts>기타</usgCntnts> 
+  <qtyCntnts>1</qtyCntnts> 
+  <unit>식</unit> 
+  <prdctClsfcNo>55121904</prdctClsfcNo> 
+  <dtilPrdctClsfcNo>5512190401</dtilPrdctClsfcNo> 
+  <prdctClsfcNoNm>광고판</prdctClsfcNoNm> 
+  <ntceNticeYn>Y</ntceNticeYn> 
+  <cnstwkMngNo>20160625050</cnstwkMngNo> 
+  <orderOrd /> 
+  <sumOrderDolAmt>154377.1</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1 /> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1 /> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd /> 
+  <cnstwkPrdCntnts /> 
+  <nticeDt>2016-06-21 16:20:27</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm>간판</dtilPrdctClsfcNoNm> 
+  <specCntnts>첨부된 규격서 참조</specCntnts> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>1-1-2016-7000126-000008</orderPlanUntyNo> 
+<bidNtceNoList /> 
+< chgDt/>
+  </item></itmes>
+<numOfRows>1</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>10</totalCount>
+</body>
+</response>
+
+
+[발주계획현황에 대한 공사조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+2
+오퍼레이션명(국문)
+발주계획현황에 대한 공사조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListCnstwk
+
+오퍼레이션 설명
+검색조건을 조회구분, 발주년월범위, 게시일자범위, 발주기관코드, 발주기관명, 발주계획통합번호로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 공사에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+inqryDiv
+조회구분
+1
+1
+1
+검색하고자하는 조회구분 1. 발주년월, 게시일시 2. 발주계획통합번호
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM', *입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+orderEndYm
+발주종료년월
+6
+0
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM', *입력값이 없을 경우 현재일로부터 한달기준 조회, 조회구분이 1인 경우 필수
+inqryBgnDt
+조회시작일시
+12
+0
+201606010000
+검색하고자하는 게시일시 기준 조회시작
+'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm' *입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+3-1-2016-8781000- 000051
+검색하고자하는 업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨. 조회구분이 2인 경우 필수
+orderInsttCd
+발주기관코드
+7
+0
+7000126
+검색하고자하는 발주기관코드, 조회구분이 1인 경우 선택
+orderInsttNm
+발주기관명
+200
+0
+경북대학교
+검색하고자하는 발주기관명, 조회구분이 1인 경우 선택
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+3
+업무구분코드가1이면 물품, 2면 외자, 3이면 공사, 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+공사
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+8781000
+발주기관코드는행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+경상북도교육청
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+03
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+교육기관
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+경상북도교육청 경상북도김천교육지원청
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+51
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+지례초등학교 옹벽 및 배수로 설치공사
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+수의
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+57794000
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+7780000
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+65574000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+행정지원과
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+김중학
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+054-420-5231
+발주계획의 담당자 전화번호
+agrmntYn
+협정여부
+1
+0
+N
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+정보제공
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+1
+발주계획의 수량내용
+unit
+단위
+30
+0
+개
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+11
+0
+32101617
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+3210161700
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+스마트카드
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+Y
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+200244.0
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201112300199
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Radiation Tye
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Measuring Range
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Overload display
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+Sensitivity
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Energy Range
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Photon radiation
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+0.01 uSv/h ~ 100 mSv/h
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+more than 100 mSv/h, overload indication up to 100 Sv/h
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+around 150 cps/uSv/h for photon radiation 660keV(Cs-137)
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Starting from 30keV(count rate)  60 keV ~ 1.3MeV(dose and dose rate measurement)
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+1232-300-420-03
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+1036
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-01-19 14:32:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+3-1-2016-8781000-000051
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListCnstwk?inqryDiv=1&orderBgnYm=201606&orderEndYm=201608&inqryBgnDt=201606250000&inqryEndDt=201606282359&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>정상</resultMsg>
+</header>
+<body>
+<items>  <item>
+  <bsnsDivCd>3</bsnsDivCd> 
+  <bsnsDivNm>공사</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>8781000</orderInsttCd> 
+  <totlmngInsttNm>경상북도교육청</totlmngInsttNm> 
+  <jrsdctnDivCd>03</jrsdctnDivCd> 
+  <jrsdctnDivNm>교육기관</jrsdctnDivNm> 
+  <orderInsttNm>경상북도교육청 경상북도김천교육지원청</orderInsttNm> 
+  <orderPlanSno>51</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>지례초등학교 옹벽 및 배수로 설치공사</bizNm> 
+  <cnstwkRgnNm>경상북도</cnstwkRgnNm> 
+  <cnsttyDivNm>전문</cnsttyDivNm> 
+  <cntrctMthdNm>수의</cntrctMthdNm> 
+  <orderContrctAmt>57794000</orderContrctAmt> 
+  <orderGovsplyMtrcst>7780000</orderGovsplyMtrcst> 
+  <orderEtcAmt>0</orderEtcAmt> 
+  <sumOrderAmt>65574000</sumOrderAmt> 
+  <deptNm>행정지원과</deptNm> 
+  <ofclNm>김중학</ofclNm> 
+  <telNo>054-420-5231</telNo> 
+  <agrmntYn>N</agrmntYn> 
+  <usgCntnts /> 
+  <qtyCntnts /> 
+  <unit /> 
+  <prdctClsfcNo /> 
+  <dtilPrdctClsfcNo /> 
+  <prdctClsfcNoNm /> 
+  <ntceNticeYn>N</ntceNticeYn> 
+  <cnstwkMngNo /> 
+  <orderOrd /> 
+  <sumOrderDolAmt>55950.5</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1 /> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1 /> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd /> 
+  <cnstwkPrdCntnts /> 
+  <nticeDt>2016-06-28 13:52:46</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm /> 
+  <specCntnts /> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>3-1-2016-8781000-000051</orderPlanUntyNo> 
+<bidNtceNoList />
+< chgDt/> 
+  </item>
+ <item>
+  <bsnsDivCd>3</bsnsDivCd> 
+  <bsnsDivNm>공사</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>8371000</orderInsttCd> 
+  <totlmngInsttNm>전라북도교육청</totlmngInsttNm> 
+  <jrsdctnDivCd>03</jrsdctnDivCd> 
+  <jrsdctnDivNm>교육기관</jrsdctnDivNm> 
+  <orderInsttNm>전라북도교육청 전라북도남원교육지원청</orderInsttNm> 
+  <orderPlanSno>32</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>남원 오동초외 1교(남원월락초) 천정텍스 설치 및 기타수선 공사</bizNm> 
+  <cnstwkRgnNm>전라북도</cnstwkRgnNm> 
+  <cnsttyDivNm>전문</cnsttyDivNm> 
+  <cntrctMthdNm>일반</cntrctMthdNm> 
+  <orderContrctAmt>143200000</orderContrctAmt> 
+  <orderGovsplyMtrcst>11808000</orderGovsplyMtrcst> 
+  <orderEtcAmt>0</orderEtcAmt> 
+  <sumOrderAmt>155008000</sumOrderAmt> 
+  <deptNm>행정지원과</deptNm> 
+  <ofclNm>김대영</ofclNm> 
+  <telNo>063-620-7874</telNo> 
+  <agrmntYn>N</agrmntYn> 
+  <usgCntnts /> 
+  <qtyCntnts /> 
+  <unit /> 
+  <prdctClsfcNo /> 
+  <dtilPrdctClsfcNo /> 
+  <prdctClsfcNoNm /> 
+  <ntceNticeYn>N</ntceNticeYn> 
+  <cnstwkMngNo /> 
+  <orderOrd /> 
+  <sumOrderDolAmt>132259.4</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1 /> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1 /> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd /> 
+  <cnstwkPrdCntnts /> 
+  <nticeDt>2016-06-28 13:52:02</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm /> 
+  <specCntnts /> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>3-1-2016-8371000-000032</orderPlanUntyNo> 
+<bidNtceNoList /> 
+< chgDt/>
+  </item>
+</items>
+<numOfRows>1</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>10</totalCount>
+</body>
+</response>
+
+
+[발주계획현황에 대한 용역조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+3
+오퍼레이션명(국문)
+발주계획현황에 대한 용역조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListServc
+
+오퍼레이션 설명
+검색조건을 조회구분, 발주년월범위, 게시일자범위, 발주기관코드, 발주기관명으로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 용역에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+inqryDiv
+조회구분
+1
+1
+1
+검색하고자하는 조회구분 1. 발주년월, 게시일시 2. 발주계획통합번호
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM', *입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+orderEndYm
+발주종료년월
+6
+0
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM', *입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+inqryBgnDt
+조회시작일시
+12
+0
+201606010000
+검색하고자하는 게시일시 기준 조회시작'YYYYMMDDHHmm', *입력값이 없을 경우 현재일로 부터 하루기준 조회. 조회구분이 1인 경우 필수
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm', *입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+5-1-2016-7391000-000033
+검색하고자하는 업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨. 조회구분이 2인 경우 필수
+orderInsttCd
+발주기관코드
+7
+0
+7000126
+검색하고자하는 발주기관코드, 조회구분이 1인 경우 선택
+orderInsttNm
+발주기관명
+200
+0
+경북대학교
+검색하고자하는 발주기관명, 조회구분이 1인 경우 선택
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+5
+업무구분코드가 1이면 물품, 2면 외자, 3이면 공사, 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+용역
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+4470000
+발주기관코드는 행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+충청북도
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+02
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+지자체
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+충청북도 음성군
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+24
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+주택건설공사 감리자(건축) 모집 공고
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+일반용역
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+일반
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+0
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+0
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+6400000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+상인고등학교
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+김은정
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+053-231-5186
+발주계획의 담당자전화번호
+agrmntYn
+협정여부
+1
+0
+N
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+실험실안전장비
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+30
+발주계획의 수량내용
+unit
+단위
+30
+0
+set
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+8
+0
+41103502
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4110350201
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+실험실용배기기
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+Y
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+5460.8
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201606271388
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Ultra Performance Liquid Chromatography System
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Photodiode Array Detector
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Chromatography manager software
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+System Suitability Option Software
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Accessories
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Type : Binary Precise, High pressure blending
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+Number of Sample Plates : 96 vial or morer
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+Column Temperature Control : 5.0°C above ambient to 90.0°C or wider
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+Wavelength Range : 190~800 nm or wider
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Full 64 bit OS System &#8211; Win 7 pro
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+9027200000
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+201608
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-06-22 10:32:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+5-1-2016-7391000-000033
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListServc?inqryDiv=1&orderBgnYm=201606&orderEndYm=201608&inqryBgnDt=201606010000&inqryEndDt=201606282359&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>정상</resultMsg>
+</header>
+<body>
+<items>
+ <item>
+  <bsnsDivCd>5</bsnsDivCd> 
+  <bsnsDivNm>용역</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>7800480</orderInsttCd> 
+  <totlmngInsttNm>강원도교육청</totlmngInsttNm> 
+  <jrsdctnDivCd>03</jrsdctnDivCd> 
+  <jrsdctnDivNm>교육기관</jrsdctnDivNm> 
+  <orderInsttNm>강원도교육청 강원진로교육원</orderInsttNm> 
+  <orderPlanSno>6</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>강원진로교육원 그랜드피아노 구매</bizNm> 
+  <cnstwkRgnNm /> 
+  <cnsttyDivNm>일반용역</cnsttyDivNm> 
+  <cntrctMthdNm>수의</cntrctMthdNm> 
+  <orderContrctAmt /> 
+  <orderGovsplyMtrcst /> 
+  <orderEtcAmt /> 
+  <sumOrderAmt>20000000</sumOrderAmt> 
+  <deptNm>총무과</deptNm> 
+  <ofclNm>권진호</ofclNm> 
+  <telNo>033-639-9853</telNo> 
+  <agrmntYn>N</agrmntYn> 
+  <usgCntnts /> 
+  <qtyCntnts /> 
+  <unit /> 
+  <prdctClsfcNo /> 
+  <dtilPrdctClsfcNo /> 
+  <prdctClsfcNoNm /> 
+  <ntceNticeYn>N</ntceNticeYn> 
+  <cnstwkMngNo /> 
+  <orderOrd /> 
+  <sumOrderDolAmt>17064.8</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1 /> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1 /> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd /> 
+  <cnstwkPrdCntnts /> 
+  <nticeDt>2016-06-28 13:51:23</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm /> 
+  <specCntnts /> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>5-1-2016-7800480-000006</orderPlanUntyNo> 
+<bidNtceNoList /> 
+< chgDt/>
+  </item>
+ <item>
+  <bsnsDivCd>5</bsnsDivCd> 
+  <bsnsDivNm>용역</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>D151742</orderInsttCd> 
+  <totlmngInsttNm>정부산하기관및위원회</totlmngInsttNm> 
+  <jrsdctnDivCd>52</jrsdctnDivCd> 
+  <jrsdctnDivNm>준정부기관</jrsdctnDivNm> 
+  <orderInsttNm>한국농어촌공사 전남지역본부 강진지사</orderInsttNm> 
+  <orderPlanSno>5</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>비자동 창조적마을만들기 지역역량강화사업 용역</bizNm> 
+  <cnstwkRgnNm /> 
+  <cnsttyDivNm>일반용역</cnsttyDivNm> 
+  <cntrctMthdNm>일반</cntrctMthdNm> 
+  <orderContrctAmt /> 
+  <orderGovsplyMtrcst /> 
+  <orderEtcAmt /> 
+  <sumOrderAmt>40000000</sumOrderAmt> 
+  <deptNm>강진지사</deptNm> 
+  <ofclNm>김권묵</ofclNm> 
+  <telNo>010-2680-6731</telNo> 
+  <agrmntYn>N</agrmntYn> 
+  <usgCntnts /> 
+  <qtyCntnts /> 
+  <unit /> 
+  <prdctClsfcNo /> 
+  <dtilPrdctClsfcNo /> 
+  <prdctClsfcNoNm /> 
+  <ntceNticeYn>N</ntceNticeYn> 
+  <cnstwkMngNo /> 
+  <orderOrd /> 
+  <sumOrderDolAmt>34129.7</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1 /> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1 /> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd /> 
+  <cnstwkPrdCntnts /> 
+  <nticeDt>2016-06-28 13:47:41</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm /> 
+  <specCntnts /> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>5-1-2016-D151742-000005</orderPlanUntyNo> 
+<bidNtceNoList /> 
+< chgDt/>
+  </item> </items>
+<numOfRows>1</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>10</totalCount>
+</body>
+</response>
+
+
+[발주계획현황에 대한 외자조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+4
+오퍼레이션명(국문)
+발주계획현황에 대한 외자조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListFrgcpt
+
+오퍼레이션 설명
+검색조건을 조회구분, 발주년월범위, 게시일자범위, 발주기관코드, 발주기관명으로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 외자에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+inqryDiv
+조회구분
+1
+1
+1
+검색하고자하는 조회구분, 1. 발주년월, 게시일시, 2. 발주계획통합번호
+orderBgnYm
+발주시작년월
+6
+0
+202007
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM', *입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+orderEndYm
+발주종료년월
+6
+0
+202007
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM', *입력값이 없을 경우 현재일로부터 한달기준 조회. 조회구분이 1인 경우 필수
+inqryBgnDt
+조회시작일시
+12
+0
+202007010000
+검색하고자하는 게시일시 기준 조회시작
+'YYYYMMDDHHmm', *입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+inqryEndDt
+조회종료일시
+12
+0
+202007302359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm', *입력값이 없을 경우 현재일로부터 하루기준 조회. 조회구분이 1인 경우 필수
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+2-1-2020-1371810-000002
+검색하고자하는 업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨. 조회구분이 2인 경우 필수
+orderInsttCd
+발주기관코드
+7
+0
+1371810
+검색하고자하는 발주기관코드, 조회구분이 1인 경우 선택
+orderInsttNm
+발주기관명
+200
+0
+문화체육관광부
+검색하고자하는 발주기관명, 조회구분이 1인 경우 선택
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+2
+업무구분코드가 1이면 물품, 2면 외자, 3이면 공사, 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+외자
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+6110163
+발주기관코드는 행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+서울특별시
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+02
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+지자체
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+서울특별시 보건환경연구원
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+12
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+중앙조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+미세조작용 현미경시스템[Micromanipulation microscope system]
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+일반경쟁
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+0
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+0
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+99000000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+재무회계팀
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+현가람
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+053-757-4177
+발주계획의 담당자전화번호
+agrmntYn
+협정여부
+1
+0
+시험분석
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+주류분석 연구
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+1
+발주계획의 수량내용
+unit
+단위
+30
+0
+system
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+8
+0
+41115705
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4111570501
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+기타식품원료
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+N
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+67935.5
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201606271388
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Ultra Performance Liquid Chromatography System
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Photodiode Array Detector
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Chromatography manager software
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+System Suitability Option Software
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Accessories
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Type : Binary Precise, High pressure blending
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+Number of Sample Plates : 96 vial or morer
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+Column Temperature Control : 5.0°C above ambient to 90.0°C or wider
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+Wavelength Range : 190~800 nm or wider
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Full 64 bit OS System &#8211; Win 7 pro
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+9027200000
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+201608
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-06-27 14:40:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+2-1-2016-Z005465-000006
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListFrgcpt?inqryDiv=1&orderBgnYm=201606&orderEndYm=201608&inqryBgnDt=201606010000&inqryEndDt=201606282359&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>정상</resultMsg>
+</header>
+<body>
+<items>
+ <item>
+  <bsnsDivCd>2</bsnsDivCd> 
+  <bsnsDivNm>외자</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>Z005465</orderInsttCd> 
+  <totlmngInsttNm>정부출연기관</totlmngInsttNm> 
+  <jrsdctnDivCd>53</jrsdctnDivCd> 
+  <jrsdctnDivNm>기타공공기관</jrsdctnDivNm> 
+  <orderInsttNm>한국화학연구원부설안전성평가연구소</orderInsttNm> 
+  <orderPlanSno>6</orderPlanSno> 
+  <prcrmntMethd>자체조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>심장활동 전위분석 프로그램[GLP APD(Action Potential Duration) Software system]</bizNm> 
+  <cnstwkRgnNm /> 
+  <cnsttyDivNm /> 
+  <cntrctMthdNm>일반경쟁</cntrctMthdNm> 
+  <orderContrctAmt /> 
+  <orderGovsplyMtrcst /> 
+  <orderEtcAmt /> 
+  <sumOrderAmt>42877527</sumOrderAmt> 
+  <deptNm>총무구매팀</deptNm> 
+  <ofclNm>이희성</ofclNm> 
+  <telNo>042-610-8133</telNo> 
+  <agrmntYn /> 
+  <usgCntnts>연구 시험용</usgCntnts> 
+  <qtyCntnts>1</qtyCntnts> 
+  <unit>system</unit> 
+  <prdctClsfcNo>43232605</prdctClsfcNo> 
+  <dtilPrdctClsfcNo>4323260501</dtilPrdctClsfcNo> 
+  <prdctClsfcNoNm /> 
+  <ntceNticeYn>N</ntceNticeYn> 
+  <cnstwkMngNo /> 
+  <orderOrd /> 
+  <sumOrderDolAmt>36584.9</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1>GLP APD(Action Potential Duration) Softeare system</specItemNm1> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1>규격서 참조</specItemCntnts1> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd>8524910000</bdgtDivCd> 
+  <cnstwkPrdCntnts>201606</cnstwkPrdCntnts> 
+  <nticeDt>2016-06-28 13:15:07</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm>응용과학용소프트웨어</dtilPrdctClsfcNoNm> 
+  <specCntnts /> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>2-1-2016-Z005465-000006</orderPlanUntyNo> 
+<bidNtceNoList /> 
+< chgDt/>
+  </item>
+ <item>
+  <bsnsDivCd>2</bsnsDivCd> 
+  <bsnsDivNm>외자</bsnsDivNm> 
+  <bsnsTyCd>1</bsnsTyCd> 
+  <bsnsTyNm>신규</bsnsTyNm> 
+  <orderYear>2016</orderYear> 
+  <orderInsttCd>Z026425</orderInsttCd> 
+  <totlmngInsttNm>(사)한국금형산업진흥회</totlmngInsttNm> 
+  <jrsdctnDivCd>72</jrsdctnDivCd> 
+  <jrsdctnDivNm>기타기관</jrsdctnDivNm> 
+  <orderInsttNm>(사)한국금형산업진흥회</orderInsttNm> 
+  <orderPlanSno>1</orderPlanSno> 
+  <prcrmntMethd>중앙조달</prcrmntMethd> 
+  <orderMnth>06</orderMnth> 
+  <bizNm>5면 머시닝센터25호기[5surface machining center]</bizNm> 
+  <cnstwkRgnNm /> 
+  <cnsttyDivNm /> 
+  <cntrctMthdNm>규격가격동시</cntrctMthdNm> 
+  <orderContrctAmt /> 
+  <orderGovsplyMtrcst /> 
+  <orderEtcAmt /> 
+  <sumOrderAmt>1773000000</sumOrderAmt> 
+  <deptNm>장비운영1팀</deptNm> 
+  <ofclNm>김영호</ofclNm> 
+  <telNo>062-946-1801</telNo> 
+  <agrmntYn /> 
+  <usgCntnts>금속 가공용</usgCntnts> 
+  <qtyCntnts>1</qtyCntnts> 
+  <unit>set</unit> 
+  <prdctClsfcNo>23242403</prdctClsfcNo> 
+  <dtilPrdctClsfcNo>2324240301</dtilPrdctClsfcNo> 
+  <prdctClsfcNoNm /> 
+  <ntceNticeYn>N</ntceNticeYn> 
+  <cnstwkMngNo /> 
+  <orderOrd /> 
+  <sumOrderDolAmt>1512798.6</sumOrderDolAmt> 
+  <rcritRgstNo /> 
+  <specItemNm1>구조</specItemNm1> 
+  <specItemNm2 /> 
+  <specItemNm3 /> 
+  <specItemNm4 /> 
+  <specItemNm5 /> 
+  <specItemCntnts1>문형구조</specItemCntnts1> 
+  <specItemCntnts2 /> 
+  <specItemCntnts3 /> 
+  <specItemCntnts4 /> 
+  <specItemCntnts5 /> 
+  <bdgtDivCd>8457100000</bdgtDivCd> 
+  <cnstwkPrdCntnts>201606</cnstwkPrdCntnts> 
+  <nticeDt>2016-06-27 18:22:48</nticeDt> 
+  <orderThtmContrctAmt /> 
+  <orderNtntrsAuxAmt /> 
+  <dtilPrdctClsfcNoNm>수직형머시닝센터</dtilPrdctClsfcNoNm> 
+  <specCntnts /> 
+  <dsgnDocRdngPlceNm /> 
+  <dsgnDocRdngPrdCntnts /> 
+  <rmrkCntnts /> 
+  <orderPlanUntyNo>2-1-2016-Z026425-000001</orderPlanUntyNo> 
+<bidNtceNoList /> 
+< chgDt/>
+  </item>
+</itmes>
+<numOfRows>1</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>10</totalCount>
+</body>
+</response>
+
+[나라장터 검색조건에 의한 발주계획현황에 대한 물품조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+5
+오퍼레이션명(국문)
+나라장터 검색조건에 의한 발주계획현황에 대한 물품조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListThngPPSSrch
+
+오퍼레이션 설명
+검색조건을 발주시작년월, 발주종료년월, 게시일시, 발주기관코드, 발주기관명, 협정여부, 조달방식, 기관소재지, 세부품명번호, 사업명으로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 물품에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+0
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+0
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+Json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+orderEndYm
+발주종료년월
+6
+0
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+inqryBgnDt
+조회시작일시
+12
+0
+201606010000
+검색하고자하는 게시일시 기준 조회시작 'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로 부터 하루기준 조회
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로부터 하루기준 조회
+orderInsttCd
+발주기관코드
+7
+0
+7000126
+검색하고자하는 발주기관코드
+orderInsttNm
+발주기관명
+200
+0
+경북대학교
+검색하고자하는 발주기관명
+agrmntYn
+협정여부
+1
+0
+Y
+검색하고자하는 발주계획 협정여부
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+검색하고자하는 조달방식 (중앙조달, 자체조달)
+insttLctNm
+기관소재지명
+100
+0
+서울특별시
+검색하고자 하는 기관의 소재지
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4110350201
+검색하고자하는 품명 분류번호
+bizNm
+사업명
+400
+0
+경북대학교 생물안전작업대(중소기업자간 경쟁물품) 구매 [재공고]
+검색하고자하는 발주계획의 사업명
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+1
+업무구분코드가 1이면 물품 2면 외자 3이면 공사 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+물품
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+7000126
+발주기관코드는 행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+교육인적자원부
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+01
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+국가기관
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+경북대학교
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+9
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+경북대학교 생물안전작업대(중소기업자간 경쟁물품) 구매 [재공고]
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+일반총액
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+0
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+0
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+327250000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+재무과
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+우용준
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+053-950-5042
+발주계획의 담당자 전화번호
+agrmntYn
+협정여부
+1
+0
+N
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+실험실안전장비
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+30
+발주계획의 수량내용
+unit
+단위
+30
+0
+set
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+8
+0
+41103502
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4110350201
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+실험실용배기기
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+Y
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+279223.5
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201606271388
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Ultra Performance Liquid Chromatography System
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Photodiode Array Detector
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Chromatography manager software
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+System Suitability Option Software
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Accessories
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Type : Binary Precise, High pressure blending
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+Number of Sample Plates : 96 vial or morer
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+Column Temperature Control : 5.0°C above ambient to 90.0°C or wider
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+Wavelength Range : 190~800 nm or wider
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Full 64 bit OS System &#8211; Win 7 pro
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+9027200000
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+201608
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+1-1-2016-7000126-000009
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListThngPPSSrch?orderBgnYm=201606&orderEndYm=201606&inqryBgnDt=201606010000&inqryEndDt=201606282359&orderInsttCd=1270460&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+	<header>
+		<resultCode>00</resultCode>
+		<resultMsg>정상</resultMsg>
+	</header>
+	<body>
+		<items>
+			<item>
+				<bsnsDivCd>1</bsnsDivCd>
+				<bsnsDivNm>물품</bsnsDivNm>
+				<bsnsTyCd>1</bsnsTyCd>
+				<bsnsTyNm>신규</bsnsTyNm>
+				<orderYear>2016</orderYear>
+				<orderInsttCd>1270460</orderInsttCd>
+				<totlmngInsttNm>법무부</totlmngInsttNm>
+				<jrsdctnDivCd>01</jrsdctnDivCd>
+				<jrsdctnDivNm>국가기관</jrsdctnDivNm>
+				<orderInsttNm>법무부 광주지방교정청 군산교도소</orderInsttNm>
+				<orderPlanSno>25</orderPlanSno>
+				<prcrmntMethd>자체조달</prcrmntMethd>
+				<orderMnth>06</orderMnth>
+				<bizNm>봉제공 재봉기 2종 10대 구입</bizNm>
+				<cnstwkRgnNm />
+				<cnsttyDivNm />
+				<cntrctMthdNm>제한총액</cntrctMthdNm>
+				<orderContrctAmt />
+				<orderGovsplyMtrcst />
+				<orderEtcAmt />
+				<sumOrderAmt>16400000</sumOrderAmt>
+				<deptNm>군산교도소 직업훈련과</deptNm>
+				<ofclNm>이정근</ofclNm>
+				<telNo>063-462-0101</telNo>
+				<agrmntYn>N</agrmntYn>
+				<usgCntnts>봉제 작업용</usgCntnts>
+				<qtyCntnts>10</qtyCntnts>
+				<unit>대</unit>
+				<prdctClsfcNo>23121614</prdctClsfcNo>
+				<dtilPrdctClsfcNo>2312161401</dtilPrdctClsfcNo>
+				<prdctClsfcNoNm>재봉기</prdctClsfcNoNm>
+				<ntceNticeYn>Y</ntceNticeYn>
+				<cnstwkMngNo>20160632636</cnstwkMngNo>
+				<orderOrd>00</orderOrd>
+				<sumOrderDolAmt>13993.2</sumOrderDolAmt>
+				<rcritRgstNo />
+				<specItemNm1 />
+				<specItemNm2 />
+				<specItemNm3 />
+				<specItemNm4 />
+				<specItemNm5 />
+				<specItemCntnts1 />
+				<specItemCntnts2 />
+				<specItemCntnts3 />
+				<specItemCntnts4 />
+				<specItemCntnts5 />
+				<bdgtDivCd />
+				<cnstwkPrdCntnts />
+				<nticeDt>2016-06-28 13:45:02</nticeDt>
+				<orderThtmContrctAmt />
+				<orderNtntrsAuxAmt />
+				<dtilPrdctClsfcNoNm>재봉기</dtilPrdctClsfcNoNm>
+				<specCntnts>규격서참조</specCntnts>
+				<dsgnDocRdngPlceNm />
+				<dsgnDocRdngPrdCntnts />
+				<rmrkCntnts />
+				<orderPlanUntyNo>1-1-2016-1270460-000025</orderPlanUntyNo>
+				<bidNtceNoList>20160632636</bidNtceNoList>
+< chgDt/>
+			</item>
+		</items>
+		<numOfRows>10</numOfRows>
+		<pageNo>1</pageNo>
+		<totalCount>1</totalCount>
+	</body>
+</response>
+
+[나라장터 검색조건에 의한 발주계획현황에 대한 공사조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+6
+오퍼레이션명(국문)
+나라장터 검색조건에 의한 발주계획현황에 대한 공사조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListCnstwkPPSSrch
+
+오퍼레이션 설명
+검색조건을 발주시작년월, 발주종료년월, 게시일시, 발주기관코드, 발주기관명, 업무유형, 조달방식, 기관소재지, 공종, 사업명으로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 공사에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+0
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+0
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+orderEndYm
+발주종료년월
+6
+1
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+inqryBgnDt
+조회시작일시
+12
+0
+201606010000
+검색하고자하는 게시일시 기준 조회시작'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로 부터 하루기준 조회
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로부터 하루기준 조회
+orderInsttCd
+발주기관코드
+7
+0
+8781000
+검색하고자하는 발주기관코드
+orderInsttNm
+발주기관명
+200
+0
+경상북도교육청
+검색하고자하는 발주기관명
+bsnsTyCd
+업무유형코드
+3
+0
+1
+검색하고자하는 업무유형명 업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+검색하고자하는 업무유형명 업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+검색하고자하는 조달방식 (중앙조달, 자체조달)
+insttLctNm
+기관소재지명
+100
+0
+서울특별시
+검색하고자 하는 기관의 소재지
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+검색하고자하는 발주계획의 공종구분명
+bizNm
+사업명
+400
+0
+지례초등학교 옹벽 및 배수로 설치공사
+검색하고자하는 발주계획의 사업명
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+3
+업무구분코드가 1이면 물품 2면 외자 3이면 공사5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+공사
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+8781000
+발주기관코드는행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+경상북도교육청
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+03
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+교육기관
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+경상북도교육청 경상북도김천교육지원청
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+51
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+지례초등학교 옹벽 및 배수로 설치공사
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+수의
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+57794000
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+7780000
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+65574000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+행정지원과
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+김중학
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+054-420-5231
+발주계획의 담당자 전화번호
+agrmntYn
+협정여부
+1
+0
+N
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+정보제공
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+1
+발주계획의 수량내용
+unit
+단위
+30
+0
+개
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+8
+0
+32101617
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+3210161700
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+스마트카드
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+Y
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+200244.0
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201112300199
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Radiation Tye
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Measuring Range
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Overload display
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+Sensitivity
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Energy Range
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Photon radiation
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+0.01 uSv/h ~ 100 mSv/h
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+more than 100 mSv/h, overload indication up to 100 Sv/h
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+around 150 cps/uSv/h for photon radiation 660keV(Cs-137)
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Starting from 30keV(count rate)  60 keV ~ 1.3MeV(dose and dose rate measurement)
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+1232-300-420-03
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+1036
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-01-19 14:32:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+3-1-2016-8781000-000051
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListCnstwkPPSSrch?orderBgnYm=201606&orderEndYm=201606&inqryBgnDt=201606010000&inqryEndDt=201606282359&bizNm=한천수계 도심하천 생태복원사업 전기공사&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+	<header>
+		<resultCode>00</resultCode>
+		<resultMsg>정상</resultMsg>
+	</header>
+	<body>
+		<items>
+			<item>
+				<bsnsDivCd>3</bsnsDivCd>
+				<bsnsDivNm>공사</bsnsDivNm>
+				<bsnsTyCd>1</bsnsTyCd>
+				<bsnsTyNm>신규</bsnsTyNm>
+				<orderYear>2016</orderYear>
+				<orderInsttCd>5230000</orderInsttCd>
+				<totlmngInsttNm>경상북도</totlmngInsttNm>
+				<jrsdctnDivCd>02</jrsdctnDivCd>
+				<jrsdctnDivNm>지자체</jrsdctnDivNm>
+				<orderInsttNm>경상북도 예천군</orderInsttNm>
+				<orderPlanSno>147</orderPlanSno>
+				<prcrmntMethd>자체조달</prcrmntMethd>
+				<orderMnth>06</orderMnth>
+				<bizNm>한천수계 도심하천 생태복원사업 전기공사</bizNm>
+				<cnstwkRgnNm>경상북도</cnstwkRgnNm>
+				<cnsttyDivNm>전기</cnsttyDivNm>
+				<cntrctMthdNm>일반</cntrctMthdNm>
+				<orderContrctAmt>179000000</orderContrctAmt>
+				<orderGovsplyMtrcst>0</orderGovsplyMtrcst>
+				<orderEtcAmt>0</orderEtcAmt>
+				<sumOrderAmt>179000000</sumOrderAmt>
+				<deptNm>건축도시과</deptNm>
+				<ofclNm>지휘근</ofclNm>
+				<telNo>054-650-6341</telNo>
+				<agrmntYn>N</agrmntYn>
+				<usgCntnts />
+				<qtyCntnts />
+				<unit />
+				<prdctClsfcNo />
+				<dtilPrdctClsfcNo />
+				<prdctClsfcNoNm />
+				<ntceNticeYn>Y</ntceNticeYn>
+				<cnstwkMngNo>20160633449</cnstwkMngNo>
+				<orderOrd>00</orderOrd>
+				<sumOrderDolAmt>152730.4</sumOrderDolAmt>
+				<rcritRgstNo />
+				<specItemNm1 />
+				<specItemNm2 />
+				<specItemNm3 />
+				<specItemNm4 />
+				<specItemNm5 />
+				<specItemCntnts1 />
+				<specItemCntnts2 />
+				<specItemCntnts3 />
+				<specItemCntnts4 />
+				<specItemCntnts5 />
+				<bdgtDivCd />
+				<cnstwkPrdCntnts />
+				<nticeDt>2016-06-28 22:48:35</nticeDt>
+				<orderThtmContrctAmt />
+				<orderNtntrsAuxAmt />
+				<dtilPrdctClsfcNoNm />
+				<specCntnts />
+				<dsgnDocRdngPlceNm />
+				<dsgnDocRdngPrdCntnts />
+				<rmrkCntnts />
+				<orderPlanUntyNo>3-1-2016-5230000-000147</orderPlanUntyNo>
+				<bidNtceNoList>20160633449</bidNtceNoList>
+< chgDt/>
+			</item>
+		</items>
+		<numOfRows>10</numOfRows>
+		<pageNo>1</pageNo>
+		<totalCount>1</totalCount>
+	</body>
+</response> 
+
+ [나라장터 검색조건에 의한 발주계획현황에 대한 용역조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+7
+오퍼레이션명(국문)
+나라장터 검색조건에 의한 발주계획현황에 대한 용역조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListServcPPSSrch
+
+오퍼레이션 설명
+검색조건을 발주시작년월, 발주종료년월, 게시일시, 발주기관코드, 발주기관명, 업무유형, 조달방식, 기관소재지, 공종, 사업명으로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 용역에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+0
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+0
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+orderEndYm
+발주종료년월
+6
+0
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+inqryBgnDt
+조회시작일시
+12
+0
+201606010000
+검색하고자하는 게시일시 기준 조회시작'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로 부터 하루기준 조회
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로부터 하루기준 조회
+orderInsttCd
+발주기관코드
+7
+0
+B551505
+검색하고자하는 발주기관코드
+orderInsttNm
+발주기관명
+200
+0
+한국인터넷진흥원
+검색하고자하는 발주기관명
+bsnsTyCd
+업무유형코드
+3
+0
+1
+검색하고자하는 업무유형코드 업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+검색하고자하는 업무유형명 업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+검색하고자하는 조달방식 (중앙조달, 자체조달)
+insttLctNm
+기관소재지명
+100
+0
+서울특별시
+검색하고자 하는 기관의 소재지
+cnsttyDivNm
+공종구분명
+20
+0
+일반용역
+검색하고자하는 발주계획의 공종구분명
+bizNm
+사업명
+400
+0
+HTML5 모바일 웹 취약점 탐지 및 시각화 도구 시제품 제작 개발 용역
+검색하고자하는 발주계획의 사업명
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+5
+업무구분코드가 1이면 물품, 2면 외자, 3이면 공사, 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+용역
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+4470000
+발주기관코드는 행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+충청북도
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+02
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+지자체
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+충청북도 음성군
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+24
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+주택건설공사 감리자(건축) 모집 공고
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+일반용역
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+일반
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+0
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+0
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+6400000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+상인고등학교
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+김은정
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+053-231-5186
+발주계획의 담당자 전화번호
+agrmntYn
+협정여부
+1
+0
+N
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+실험실안전장비
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+30
+발주계획의 수량내용
+unit
+단위
+30
+0
+set
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+8
+0
+41103502
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4110350201
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+실험실용배기기
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+Y
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+5460.8
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201606271388
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Ultra Performance Liquid Chromatography System
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Photodiode Array Detector
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Chromatography manager software
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+System Suitability Option Software
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Accessories
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Type : Binary Precise, High pressure blending
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+Number of Sample Plates : 96 vial or morer
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+Column Temperature Control : 5.0°C above ambient to 90.0°C or wider
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+Wavelength Range : 190~800 nm or wider
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Full 64 bit OS System &#8211; Win 7 pro
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+9027200000
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+201608
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-06-22 10:32:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+5-1-2016-7391000-000033
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListServcPPSSrch?orderBgnYm=201606&orderEndYm=201606&inqryBgnDt=201606010000&inqryEndDt=201606282359&bizNm=무림지구 배수개선사업 세부설계 용역&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+	<header>
+		<resultCode>00</resultCode>
+		<resultMsg>정상</resultMsg>
+	</header>
+	<body>
+		<items>
+			<item>
+				<bsnsDivCd>5</bsnsDivCd>
+				<bsnsDivNm>용역</bsnsDivNm>
+				<bsnsTyCd>1</bsnsTyCd>
+				<bsnsTyNm>신규</bsnsTyNm>
+				<orderYear>2016</orderYear>
+				<orderInsttCd>D150440</orderInsttCd>
+				<totlmngInsttNm>정부산하기관및위원회</totlmngInsttNm>
+				<jrsdctnDivCd>52</jrsdctnDivCd>
+				<jrsdctnDivNm>준정부기관</jrsdctnDivNm>
+				<orderInsttNm>한국농어촌공사 경북지역본부</orderInsttNm>
+				<orderPlanSno>49</orderPlanSno>
+				<prcrmntMethd>자체조달</prcrmntMethd>
+				<orderMnth>06</orderMnth>
+				<bizNm>무림지구 배수개선사업 세부설계 용역</bizNm>
+				<cnstwkRgnNm />
+				<cnsttyDivNm>기술용역</cnsttyDivNm>
+				<cntrctMthdNm>PQ</cntrctMthdNm>
+				<orderContrctAmt />
+				<orderGovsplyMtrcst />
+				<orderEtcAmt />
+				<sumOrderAmt>306984000</sumOrderAmt>
+				<deptNm>농지은행부</deptNm>
+				<ofclNm>이자은</ofclNm>
+				<telNo>053-320-4814</telNo>
+				<agrmntYn>N</agrmntYn>
+				<usgCntnts />
+				<qtyCntnts />
+				<unit />
+				<prdctClsfcNo />
+				<dtilPrdctClsfcNo />
+				<prdctClsfcNoNm />
+				<ntceNticeYn>Y</ntceNticeYn>
+				<cnstwkMngNo>20160703694</cnstwkMngNo>
+				<orderOrd>00</orderOrd>
+				<sumOrderDolAmt>261931.7</sumOrderDolAmt>
+				<rcritRgstNo />
+				<specItemNm1 />
+				<specItemNm2 />
+				<specItemNm3 />
+				<specItemNm4 />
+				<specItemNm5 />
+				<specItemCntnts1 />
+				<specItemCntnts2 />
+				<specItemCntnts3 />
+				<specItemCntnts4 />
+				<specItemCntnts5 />
+				<bdgtDivCd />
+				<cnstwkPrdCntnts />
+				<nticeDt>2016-06-28 22:05:17</nticeDt>
+				<orderThtmContrctAmt />
+				<orderNtntrsAuxAmt />
+				<dtilPrdctClsfcNoNm />
+				<specCntnts />
+				<dsgnDocRdngPlceNm />
+				<dsgnDocRdngPrdCntnts />
+				<rmrkCntnts />
+				<orderPlanUntyNo>5-1-2016-D150440-000049</orderPlanUntyNo>
+				<bidNtceNoList>20160703694</bidNtceNoList>
+< chgDt/>
+			</item>
+		</items>
+		<numOfRows>10</numOfRows>
+		<pageNo>1</pageNo>
+		<totalCount>1</totalCount>
+	</body>
+</response>
+
+[나라장터 검색조건에 의한 발주계획현황에 대한 외자조회] 오퍼레이션 명세
+오퍼레이션 정보
+오퍼레이션 번호
+8
+오퍼레이션명(국문)
+나라장터 검색조건에 의한 발주계획현황에 대한 외자조회
+
+오퍼레이션 유형
+조회(목록)
+오퍼레이션명(영문)
+getOrderPlanSttusListFrgcptPPSSrch
+
+오퍼레이션 설명
+검색조건을 발주시작년월, 발주종료년월, 게시일시, 발주기관코드, 발주기관명, 업무유형, 조달방식, 기관소재지, 사업명으로 하여 발주년도, 발주기관, 소관기관, 계약방법, 발주도급금액, 물품분류 정보, 규격항목정보 등 외자에 대한 발주계획현황 조회
+
+Call Back URL
+N/A
+
+최대 메시지 사이즈
+[ 4000bytes]
+
+평균 응답 시간
+[ 	500	ms]
+초당 최대 트랜잭션
+[ 	30	tps]
+요청 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+numOfRows
+한 페이지 결과 수
+4
+0
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+0
+1
+페이지 번호
+ServiceKey
+서비스키
+400
+1
+공공데이터포탈에서 받은 인증키
+공공데이터포탈에서 받은 인증키
+type
+타입
+4
+0
+json
+오픈API 리턴 타입을 JSON으로 받고 싶을 경우 'json' 으로 지정함
+orderBgnYm
+발주시작년월
+6
+0
+201606
+검색하고자하는 발주년도, 발주월 기준 조회시작 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+orderEndYm
+발주종료년월
+6
+0
+201608
+검색하고자하는 발주년도, 발주월 기준 조회종료 'YYYYMM' * 입력값이 없을 경우 현재일로부터 한달기준 조회
+inqryBgnDt
+조회시작일시
+12
+1
+201606010000
+검색하고자하는 게시일시 기준 조회시작'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로 부터 하루기준 조회
+inqryEndDt
+조회종료일시
+12
+0
+201606282359
+검색하고자하는 게시일시 기준 조회종료 'YYYYMMDDHHmm' * 입력값이 없을 경우 현재일로부터 하루기준 조회
+orderInsttCd
+발주기관코드
+7
+0
+B350021
+검색하고자하는 발주기관코드
+orderInsttNm
+발주기관명
+200
+0
+한국과학기술원
+검색하고자하는 발주기관명
+bsnsTyCd
+업무유형코드
+3
+0
+1
+검색하고자하는 업무유형명 업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+검색하고자하는 업무유형명 업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+prcrmntMethd
+조달방식
+20
+0
+자체조달
+검색하고자하는 조달방식 (중앙조달, 자체조달)
+insttLctNm
+기관소재지명
+100
+0
+서울특별시
+검색하고자 하는 기관의 소재지
+bizNm
+사업명
+400
+0
+고온 고압 증기 멸균기
+검색하고자하는 발주계획의 사업명
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+응답 메시지 명세
+항목명(영문)
+항목명(국문)
+항목크기
+항목구분
+샘플데이터
+항목설명
+resultCode
+결과코드
+2
+1
+00
+결과코드
+resultMsg
+결과메세지
+50
+1
+정상.
+결과메세지
+numOfRows
+한 페이지 결과 수
+4
+1
+10
+한 페이지 결과 수
+pageNo
+페이지 번호
+4
+1
+1
+페이지 번호
+totalCount
+데이터 총 개수
+4
+1
+17
+데이터 총개수
+bsnsDivCd
+업무구분코드
+2
+1
+2
+업무구분코드가 1이면 물품, 2면 외자, 3이면 공사, 5면 용역
+bsnsDivNm
+업무구분명
+20
+1
+외자
+업무구분명
+bsnsTyCd
+업무유형코드
+3
+1
+1
+업무유형코드 1이면 신규, 2면 장기 나머지는 "해당없음"
+bsnsTyNm
+업무유형명
+20
+0
+신규
+업무유형명
+orderYear
+발주년도
+4
+1
+2016
+발주년도
+orderInsttCd
+발주기관코드
+7
+1
+6110163
+발주기관코드는 행자부코드(행정자치부에서 부여한 기관코드)가 있는 경우 행자부코드가 행자부코드가 없는 경우 조달청에서 부여한 발주기관 코드가 표기됨
+totlmngInsttNm
+총괄기관명
+200
+0
+서울특별시
+총괄기관명
+jrsdctnDivCd
+소관구분코드
+2
+0
+02
+소관구분코드  01 : 국가기관  02 : 지자체 03 : 교육기관 51 : 공기업 52 : 준정부기관 53 : 기타공공기관 71 : 지방공기업 72 : 기타기관 81 : 지자체 출자출연기관
+jrsdctnDivNm
+소관구분명
+100
+0
+지자체
+소관구분명
+orderInsttNm
+발주기관명
+200
+0
+서울특별시 보건환경연구원
+발주기관명
+orderPlanSno
+발주계획순번
+6
+1
+12
+발주계획순번
+prcrmntMethd
+조달방식
+20
+0
+중앙조달
+조달방식은 중앙조달과 자체조달로 구분됨
+orderMnth
+발주월
+8
+1
+06
+발주월 "MM"
+bizNm
+사업명
+400
+1
+미세조작용 현미경시스템[Micromanipulation microscope system]
+발주계획의 사업명
+cnstwkRgnNm
+공사지역명
+100
+0
+경상북도
+발주계획의 공사지역명
+cnsttyDivNm
+공종구분명
+20
+0
+전문
+발주계획의 공종구분명
+cntrctMthdNm
+계약방법명
+20
+0
+일반경쟁
+발주계획의 계약방법명
+orderContrctAmt
+발주도급금액
+30
+0
+0
+발주도급금액(원화,원)
+orderGovsplyMtrcst
+발주관급자재비
+30
+0
+0
+발주관급자재비(원화,원)
+orderEtcAmt
+발주기타금액
+30
+0
+0
+발주기타금액(원화,원)
+sumOrderAmt
+합계발주금액
+30
+0
+99000000
+합계발주금액(원화,원)
+deptNm
+부서명
+50
+0
+재무회계팀
+발주계획의 담당부서명
+ofclNm
+담당자명
+20
+0
+현가람
+발주계획의 담당자명
+telNo
+전화번호
+20
+0
+053-757-4177
+발주계획의 담당자 전화번호
+agrmntYn
+협정여부
+1
+0
+Y
+발주계획의 협정여부
+usgCntnts
+용도내용
+50
+0
+주류분석 연구
+발주계획의 용도내용
+qtyCntnts
+수량내용
+12
+0
+1
+발주계획의 수량내용
+unit
+단위
+30
+0
+system
+발주계획의 수량단위
+prdctClsfcNo
+물품분류번호
+8
+0
+41115705
+품명에 대한 분류번호로서 8자리로 표시
+dtilPrdctClsfcNo
+세부품명번호
+10
+0
+4111570501
+품명에 대한 분류번호로서 10자리로 표시
+prdctClsfcNoNm
+품명
+200
+0
+기타식품원료
+물품분류번호 8자리에 해당하는 물품의 한글이름
+ntceNticeYn
+공고게시여부
+1
+1
+N
+발주계획의 공고게시여부
+sumOrderDolAmt
+합계발주미화금액
+16
+0
+67935.5
+발주계획의 합계발주미화금액(달러)
+rcritRgstNo
+모집등록번호
+12
+0
+201606271388
+발주계획의 모집등록번호
+specItemNm1
+규격항목명1
+200
+0
+Ultra Performance Liquid Chromatography System
+발주계획의 규격항목명1
+specItemNm2
+규격항목명2
+200
+0
+Photodiode Array Detector
+발주계획의 규격항목명2
+specItemNm3
+규격항목명3
+200
+0
+Chromatography manager software
+발주계획의 규격항목명3
+specItemNm4
+규격항목명4
+200
+0
+System Suitability Option Software
+발주계획의 규격항목명4
+specItemNm5
+규격항목명5
+200
+0
+Accessories
+발주계획의 규격항목명5
+specItemCntnts1
+규격항목내용1
+200
+0
+Type : Binary Precise, High pressure blending
+발주계획의 규격항목내용1
+specItemCntnts2
+규격항목내용2
+200
+0
+Number of Sample Plates : 96 vial or morer
+발주계획의 규격항목내용2
+specItemCntnts3
+규격항목내용3
+200
+0
+Column Temperature Control : 5.0°C above ambient to 90.0°C or wider
+발주계획의 규격항목내용3
+specItemCntnts4
+규격항목내용4
+200
+0
+Wavelength Range : 190~800 nm or wider
+발주계획의 규격항목내용4
+specItemCntnts5
+규격항목내용5
+200
+0
+Full 64 bit OS System &#8211; Win 7 pro
+발주계획의 규격항목내용5
+bdgtDivCd
+예산구분코드
+25
+0
+9027200000
+발주계획의 예산구분코드
+cnstwkPrdCntnts
+공사기간내용
+30
+0
+201608
+발주계획의 공사기간내용
+nticeDt
+게시일시
+19
+0
+2016-06-27 14:40:00
+발주계획의 게시일시 "YYYY-MM-DD HH:MM:SS"
+orderThtmContrctAmt
+발주금차도급금액
+25
+0
+50000
+발주계획의 발주금차도급금액(원화,원)
+orderNtntrsAuxAmt
+발주국고보조금액
+25
+0
+60000
+발주계획의 발주국고보조금액(원화,원)
+dtilPrdctClsfcNoNm
+세부품명
+200
+0
+강판맨홀뚜껑
+세부품명번호 10자리에 대한 한글명
+specCntnts
+규격내용
+100
+0
+붙임 규격서에 의함
+발주계획의 규격내용
+dsgnDocRdngPlceNm
+설계문서열람장소명
+100
+0
+Contruction Site
+발주계획의 설계서열람장소명
+dsgnDocRdngPrdCntnts
+설계문서열람기간내용
+100
+0
+2016.11~2016.11
+발주계획의 설계서열람기간내용
+rmrkCntnts
+비고내용
+4000
+0
+설계금액 미확정 및 인허가 지연 등으로 건설일정 등은 변경될 수 있음 / 설계서 열람기간은 현장설명일의 결정에 따라 변경될 수 있음
+발주계획의 비고내용(담당부서 정보)
+orderPlanUntyNo
+발주계획통합번호
+30
+0
+2-1-2016-Z005465-000006
+업무구분코드(1)-업무유형코드(3)-발주년도(4)-기관코드(7)-발주계획순번(6) 로 구성됨
+bidNtceNoList
+입찰공고번호목록
+1000
+0
+20160608377,20160532845
+관련된 입찰공고번호 정보 "입찰공고번호1,입찰공고번호2"
+chgDt
+변경일시
+19
+0
+2016-06-28 13:21:00
+발주계획의 변경일시 "YYYY-MM-DD HH:MM:SS"
+※ 항목구분 : 필수(1), 옵션(0), 1건 이상 복수건(1..n), 0건 또는 복수건(0..n)
+요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/1230000/ao/OrderPlanSttusService/getOrderPlanSttusListFrgcptPPSSrch?orderBgnYm=201606&orderEndYm=201606&inqryBgnDt=201606010000&inqryEndDt=201606282359&bizNm=심장활동 전위분석 프로그램[GLP APD(Action Potential Duration) Software system]&pageNo=1&numOfRows=10&ServiceKey=인증키
+응답 메시지
+<response>
+	<header>
+		<resultCode>00</resultCode>
+		<resultMsg>정상</resultMsg>
+	</header>
+	<body>
+		<items>
+			<item>
+				<bsnsDivCd>2</bsnsDivCd>
+				<bsnsDivNm>외자</bsnsDivNm>
+				<bsnsTyCd>1</bsnsTyCd>
+				<bsnsTyNm>신규</bsnsTyNm>
+				<orderYear>2016</orderYear>
+				<orderInsttCd>Z005465</orderInsttCd>
+				<totlmngInsttNm>정부출연기관</totlmngInsttNm>
+				<jrsdctnDivCd>53</jrsdctnDivCd>
+				<jrsdctnDivNm>기타공공기관</jrsdctnDivNm>
+				<orderInsttNm>한국화학연구원부설안전성평가연구소</orderInsttNm>
+				<orderPlanSno>6</orderPlanSno>
+				<prcrmntMethd>자체조달</prcrmntMethd>
+				<orderMnth>06</orderMnth>
+				<bizNm>심장활동 전위분석 프로그램[GLP APD(Action Potential Duration) Software system]</bizNm>
+				<cnstwkRgnNm />
+				<cnsttyDivNm />
+				<cntrctMthdNm>일반경쟁</cntrctMthdNm>
+				<orderContrctAmt />
+				<orderGovsplyMtrcst />
+				<orderEtcAmt />
+				<sumOrderAmt>42877527</sumOrderAmt>
+				<deptNm>총무구매팀</deptNm>
+				<ofclNm>이희성</ofclNm>
+				<telNo>042-610-8133</telNo>
+				<agrmntYn />
+				<usgCntnts>연구 시험용</usgCntnts>
+				<qtyCntnts>1</qtyCntnts>
+				<unit>system</unit>
+				<prdctClsfcNo>43232605</prdctClsfcNo>
+				<dtilPrdctClsfcNo>4323260501</dtilPrdctClsfcNo>
+				<prdctClsfcNoNm />
+				<ntceNticeYn>N</ntceNticeYn>
+				<cnstwkMngNo />
+				<orderOrd />
+				<sumOrderDolAmt>36584.9</sumOrderDolAmt>
+				<rcritRgstNo />
+				<specItemNm1>GLP APD(Action Potential Duration) Softeare system
+				</specItemNm1>
+				<specItemNm2 />
+				<specItemNm3 />
+				<specItemNm4 />
+				<specItemNm5 />
+				<specItemCntnts1>규격서 참조</specItemCntnts1>
+				<specItemCntnts2 />
+				<specItemCntnts3 />
+				<specItemCntnts4 />
+				<specItemCntnts5 />
+				<bdgtDivCd>8524910000</bdgtDivCd>
+				<cnstwkPrdCntnts>201606</cnstwkPrdCntnts>
+				<nticeDt>2016-06-28 13:15:07</nticeDt>
+				<orderThtmContrctAmt />
+				<orderNtntrsAuxAmt />
+				<dtilPrdctClsfcNoNm>응용과학용소프트웨어</dtilPrdctClsfcNoNm>
+				<specCntnts />
+				<dsgnDocRdngPlceNm />
+				<dsgnDocRdngPrdCntnts />
+				<rmrkCntnts />
+				<orderPlanUntyNo>2-1-2016-Z005465-000006</orderPlanUntyNo>
+				<bidNtceNoList />
+< chgDt/>
+			</item>
+		</items>
+		<numOfRows>10</numOfRows>
+		<pageNo>1</pageNo>
+		<totalCount>1</totalCount>
+	</body>
+</response>
+OPEN API 에러코드별 조치방안
+
+Code
+코드값
+설명
+조치방안
+01
+Application Error
+제공기관 서비스 제공 상태가 원할하지 않습니다.
+서비스 제공기관의 관리자에게 문의하시기 바랍니다.
+02
+DB Error
+제공기관 서비스 제공 상태가 원할하지 않습니다.
+서비스 제공기관의 관리자에게 문의하시기 바랍니다.
+03
+No Data
+데이터 없음 에러
+
+04
+HTTP Error
+제공기관 서비스 제공 상태가 원할하지 않습니다.
+서비스 제공기관의 관리자에게 문의하시기 바랍니다.
+05
+service time out
+제공기관 서비스 제공 상태가 원할하지 않습니다
+서비스 제공기관의 관리자에게 문의하시기 바랍니다.
+06
+날짜Format 에러
+날짜 Default, Format Error
+날짜형식을 확인 하시기 바랍니다.
+07
+입력범위값 초과 에러
+요청하신 OpenAPI의 파라미터 입력값 범위가 초과 되었습니다.
+기술문서를 다시 한번 확인하여 주시기 바랍니다.
+08
+필수값 입력 에러
+요청하신 OpenAPI의 필수 파라미터가 누락되었습니다.
+기술문서를 다시 한번 확인하여 주시기 바랍니다.
+10
+잘못된 요청 파라미터 에러
+OpenAPI 요청시 ServiceKey 파라미터가 없음
+-OpenAPI 요청시 ServiceKey 파라미터가 누락되었습니다.
+-OpenAPI 요청 URL을 확인하시기 바랍니다.
+11
+필수 요청 파라미터가 없음
+요청하신 OpenAPI의 필수 파라미터가 누락되었습니다.
+기술문서를 다시 한번 확인하시어 주시기 바랍니다.
+12
+해당 오픈API 서비스가 없거나 폐기됨
+OpenAPI 호출시 URL이 잘못됨
+-제공기관 관리자에게 폐기된 서비스인지 확인바랍니다.
+폐기된 서비스가 아니면 개발가이드에서 OpenAPI요청 URL을 다시 확인하시기 바랍니다.
+20
+서비스 접근 거부
+활용승인이 되지 않은 OpenAPI호출
+-OpenAPI활용신청정보의 승인상태를 확인하시기 바랍니다.
+-활용신청에 대해 제공기관 담당자가 확인 후 '승인'이후 부터 사용할 수 있습니다.
+-신청 후 2~3일 소요되고 결과는 회원가입 시 등록한 e-mail로 발송됩니다.
+22
+서비스 요청 제한 횟수 초과 에러
+일일 활용건수가 초과함(활용건수 증가 필요)
+-OpenAPI활용신청정보의 서비스 상세기능별 일일 트래픽량을 확인하시기 바랍니다.
+-개발계정의 경우 제공기관에서 정의한 트래픽을 초과하여 활용할 수 없습니다.
+-운영계정의 경우 변경신청을 통해서 일일트래픽량을 변경 할 수 있습니다. 
+30
+등록되지 않은 서비스 키
+잘못된 서비스키를 사용하였거나 서비스키를 URL인코딩하지 
+-OpenAPI활용신청정보의 발급받은 서비스키를 다시 확인하시기 바랍니다.
+- 서비스키 값이 같다면 서비스키가 URL 인코등 되었는지 다시 확인하시기 바랍니다.
+31
+기한 만료된 서비스 키
+OpenAPI 사용기간이 만료됨
+(활용연장신청 후 사용가능)
+-OpenAPI 활용신청정보의 활용기간을 확인합니다.
+-활용기간이 지난 서비스는 이용할 수 없으며 연장신청을 통해 승인 받은 후 다시 이용가능 합니다.
+32
+등록되지 않은 도메인명 또는 IP주소
+활용신청한 서버의 IP와 실제 OpenAPI호출한 서버가 다를 경우
+-OpenAPI 활용신청정보의 등록된 도메인명이나 IP주소를 다시 확인합니다.
+-IP나 도메인의 정보를 변경하기 위해 변경신청을 할 수 있습니다.
+
