@@ -1,5 +1,29 @@
+# 환경변수 / 민감 정보
 .env
+.env.*
+!.env.example
+
+# 출력 파일 (대용량 엑셀)
 outputs/
+src/outputs/
+
+# Python
+venv/
+.venv/
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
